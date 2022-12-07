@@ -27,6 +27,13 @@ body{
 
 }
 
+button{
+    background: none;
+    border: none;
+    color: var(--font-color)
+
+}
+
 /* HEADER */
 
 #logo{
@@ -401,6 +408,8 @@ nav {
   }
 
   @media (max-width: 600px) {
+
+    
     body{
         font-size: 17px;
     }
