@@ -1,4 +1,4 @@
-import reviews from "/reviews.js"
+import reviews from "./reviews.js"
 
 const modeBtn = document.getElementById("modeBtn")
 const navbar = document.getElementById("navbar")
