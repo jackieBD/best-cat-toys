@@ -30,8 +30,7 @@ body{
 button{
     background: none;
     border: none;
-    color: var(--font-color)
-
+    color: var(--font-color);
 }
 
 /* HEADER */
@@ -294,6 +293,11 @@ nav {
 /* MEDIA QUERIES */
 
 @media (max-width: 1000px) {
+
+    button{
+        z-index: 13;
+    }
+    
 
     .page{
         min-height: 100vh;
