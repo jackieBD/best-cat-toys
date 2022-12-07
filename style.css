@@ -34,6 +34,14 @@ button{
     border: none;
     color: var(--font-color);
 }
+button:hover{
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor:auto
+}
+
 
 
 
