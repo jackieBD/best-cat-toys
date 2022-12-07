@@ -27,11 +27,15 @@ body{
 
 }
 
+/* BUTTONS */
+
 button{
     background: none;
     border: none;
     color: var(--font-color);
 }
+
+
 
 /* HEADER */
 
@@ -263,15 +267,26 @@ nav {
     margin-top: 15px;
     align-self: center;
     width: 50%;
-    background-color: var(--bg-color);
-    color: var(--font-color);
+    background-color: #C937D3;
+    color: white;
     border: 1px solid var(--font-color)
 }
 #formSubmitBtn:hover {
-    transform: scale(1.06);
+    transform: scale(1.08);
     transition: 400ms;
     background-color: #C937D3;
 }
+
+#formSubmitBtn:disabled{
+    background-color: grey;
+}
+
+#formSubmitBtn:disabled:hover{
+    transform: none;
+    background-color: grey;
+}
+
+
 
 
 /* FOOTER */
@@ -341,7 +356,7 @@ nav {
 
     /* PRODUCTS PAGE */
     #Products {
-        padding-top: 70px;
+        padding-top: 0px;
     }
 
     #Products p {
@@ -354,11 +369,14 @@ nav {
     }
     .row {
         width: 90%;
+        margin: 75px 0
+
     }
 
     /* ABOUT PAGE */
 
     #About{
+        padding-top: 0px;
         flex-direction: column;
     }
         
@@ -367,8 +385,7 @@ nav {
         border: 1px solid #C937D3;
         padding: 15px;
         border-radius: 10px;
-        margin: 0;
-        margin-bottom: 50px;
+        margin: 75px 0
     }
 
     #sidecat {
@@ -381,8 +398,15 @@ nav {
     }
     /* REVIEWS PAGE */
 
+    #Reviews{
+        padding: 0px
+
+    }
+
     #reviewDiv{
         width: 65%;
+        margin: 75px 0;
+
         
     }
     
@@ -423,18 +447,28 @@ nav {
         font-size: 17px;
     }
 
+    .page{
+        height: auto;
+        min-height: auto;
+    }
+
     #logo {
         width:120px;
         height: 80px;
         margin: 8px;
     }
 
+
     /* HOME PAGE */
 
     #homeTxt{
             font-size: 70px;
     }
+
+    /* REVIEW PAGE */
+
     #Reviews{
+        padding: 55px 0;
         flex-direction: column;
     }
     #reviewDiv{
@@ -442,6 +476,12 @@ nav {
         font-size: 22px;
         margin: 10px
         
+    }
+
+    /* CONTACT PAGE */
+
+    #formDiv {
+        width: 85%
     }
     #formDiv h3 {
         font-size: 26px;
@@ -475,3 +515,5 @@ nav {
     }
 
   }
+
+

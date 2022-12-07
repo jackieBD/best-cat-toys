@@ -12,6 +12,10 @@ const arrowBtn = document.getElementsByClassName("arrowBtn")
 const reviewDiv = document.getElementById("reviewDiv")
 const formSubmitBtn = document.getElementById("formSubmitBtn")
 const formDiv = document.getElementById("formDiv")
+const emailInput = document.getElementById("emailInput")
+const subjectInput = document.getElementById("subjectInput")
+const messageInput = document.getElementById("messageInput")
+
 
 // DARK MODE
 
@@ -164,13 +168,32 @@ function nextReview(){
 
 // CONTACT FORM
 
+document.addEventListener("keyup", checkInputs)
+
+formSubmitBtn.disabled = true
+
+function checkInputs (){
+
+    console.log(subjectInput.value.length)
+if (messageInput.value.length > 0 &&
+subjectInput.value.length > 0 &&
+emailInput.value.length > 0){
+    formSubmitBtn.disabled = false
+}
+else {formSubmitBtn.disabled = true}
+}
+
+
 formSubmitBtn.addEventListener("click", submitForm)
 
 function submitForm(e){
     e.preventDefault()
+
     console.log("form sumbitted")
     formSubmitBtn.innerText = "Thank you!"
-    setTimeout(()=>{formSubmitBtn.innerText = "Submit"}, 4000)
+    setTimeout(()=>{
+        formSubmitBtn.innerText = "Submit"
+        formSubmitBtn.disabled = true}, 3000)
     formDiv.reset()
 
 
