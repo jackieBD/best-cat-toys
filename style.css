@@ -113,6 +113,7 @@ nav {
 .page{
     width: 100vw;
     height: 100vh;
+    min-height: 600px;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -188,13 +189,15 @@ nav {
     width: 23vw;
     object-fit: cover;
     margin-left: auto;
+    min-height: 600px;
+
 }
 
 
 /* REVIEWS PAGE*/
 
 #Reviews {
-    padding-top: 80px;
+    padding-top: 60px;
     background: linear-gradient(0deg, rgba(210,117,191,1) 0%, rgba(165,102,168,1) 100%);
 }
 
@@ -233,6 +236,8 @@ nav {
     width: 26vw;
     object-fit: cover;
     margin-right: auto;
+    min-height: 600px;
+
 
 }
 
@@ -283,6 +288,7 @@ nav {
     align-items: center;
     flex-direction: column;
     background: linear-gradient(0deg, rgba(210,117,191,1) 0%, rgba(165,102,168,1) 100%);
+    min-height: 120px;
 
 }
 #Footer a {
@@ -370,6 +376,7 @@ nav {
         height: 40vh;
         width: 100vw;
         max-width: 100%;
+        min-height: 100px;
         object-fit: cover;
     }
     /* REVIEWS PAGE */
@@ -392,6 +399,7 @@ nav {
         border: none;
         margin: 0;
         height: 40vh;
+        min-height: 100px;
         width: 100vw;
         max-width: 100%;
         object-fit: cover;    
