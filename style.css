@@ -294,15 +294,7 @@ nav {
 
 @media (max-width: 1000px) {
 
-    html {
-        scroll-behavior: unset;
-      }
-    
-
-    button{
-        z-index: 13;
-    }
-    
+        
 
     .page{
         min-height: 100vh;
