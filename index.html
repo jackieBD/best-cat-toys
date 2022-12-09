@@ -13,22 +13,33 @@
   </head>
   <body id ="body" class="dark">
 
+
     <div id="header">
         <div id="logo-div" ><img id ="logo" src = "images/darklogo.png"></div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id ="navbar">
+
+        <!-- close navbar toggler for mobile  -->
+
+        <a class="close-navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </a>
+
+        <!-- bootstrap navbar -->
+
+
+        <nav class="navbar navbar-expand-lg" id ="navbar">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
+
                 <li class="nav-item active" id = "homeLink">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" id = "productLink">
-                <a class="nav-link" href="#Products">Products</a>
+                    <a class="nav-link" href="#Products">Products</a>
                 </li>
                 <li class="nav-item" id = "aboutLink">
-                <a class="nav-link" href="#About">About Us</a>
+                    <a class="nav-link" href="#About">About Us</a>
                 </li>
                 <li class="nav-item" id = "reviewLink">
                     <a class="nav-link" href="#Reviews">Reviews</a>
@@ -54,21 +65,21 @@
       <div id="Products" class = "page">
 
         <div class="row">
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product1">
                 <img src="images/toys/toy1.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product2">
                 <img src="images/toys/toy2.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product3">
                 <img src="images/toys/toy3.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product4">
                 <img src="images/toys/toy4.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
@@ -76,40 +87,169 @@
 
             <div class="w-100"></div>
 
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product5">
                 <img src="images/toys/toy5.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product6">
                 <img src="images/toys/toy6.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product7">
                 <img src="images/toys/toy7.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
-            <div class="col" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="col" data-toggle="modal" data-target="#modal-product8">
                 <img src="images/toys/toy8.png" class="prodImg">
                 <p><span class ="product-name">Product name: </span>product description goes here its a bit longer</p>
 
             </div>
         </div>
       </div>
-      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
+
+      <!-- Product Modals -->
+
+      <div id = "modal-product1" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
             <h4>Here's some more info about the product you are interested in!</h4>
-            <p>It's a really good product. We've trained for many 
-                years to provide a product as worthy as this one.
-                It has everything you could want out of a product
-                of this type and more!
-            </p>
+            <div class="modal-body">
+                <img src="images/toys/toy1.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+
           </div>
-        </div>
       </div>
+
+      <div id = "modal-product2" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy2.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product3" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy3.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product4" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy4.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product5" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy5.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product6" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy6.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product7" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy7.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
+      <div id = "modal-product8" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-content">
+            <h4>Here's some more info about the product you are interested in!</h4>
+            <div class="modal-body">
+                <img src="images/toys/toy8.png" class="modal-image">
+
+                <p class = "modal-para">It's a really good product. We've trained for many 
+                    years to provide a product as worthy as this one.
+                    It has everything you could want out of a product
+                    of this type and more! Any questions about this product? 
+                    Refer to our contact form at the bottom of the page!
+                </p>
+                </div>
+                <button type="button" class="btn modal-btn" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+
 
 
       <div id="About" class = "page">
@@ -129,12 +269,17 @@
                 on the theory of ethics, very popular during the Renaissance. 
                 The first line of Cat Toys, "Cat Toys dolor sit amet..", 
                 comes from a line in section 1.10.32.</p>
-            <p>The standard chunk of Cat Toys used since the 1500s is reproduced 
-                below for those interested. Sections 1.10.32 and 1.10.33 from "de 
-                Finibus Bonorum et Malorum" by Cicero are also reproduced in their 
-                exact original form, accompanied by English versions from the 1914 
-                translation by H. Rackham.
-            </p>
+                <div id ="about-read-more">
+                <p id = "about-read-more-para">The standard chunk of Cat Toys used since the 1500s is reproduced 
+                    below for those interested. Sections 1.10.32 and 1.10.33 from "de 
+                    Finibus Bonorum et Malorum" by Cicero are also reproduced in their 
+                    exact original form, accompanied by English versions from the 1914 
+                    translation by H. Rackham.
+                </p>
+                <button id="read-more-btn">Read More</br><i class="fa-solid fa-arrow-down"></i></button>
+                <button id="read-less-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+            </div>
         </div>
         <img src="images/sidecat.png" id = "sidecat">
 
@@ -142,17 +287,70 @@
 
       <div id="Reviews" class = "page">
         <button class="arrowBtn"><i class="fa-solid fa-arrow-left"></i></button>
-        <div id="reviewDiv">
-            <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i></i></div>
-            <p>"I'm more of a dog person but these
-            cat toys have changed my life for the better.
-            I can't reccomend them enough. Seriously
-            check out these cat toys."</p>
+           <div id="scroller">
+                <div class="review-div">
+                    <div class="stars-div">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"I'm more of a dog person but these
+                    cat toys have changed my life for the better.
+                    I can't reccomend them enough. Seriously
+                    check out these cat toys."</p>
+                </div>
+                <div class="review-div">
+                    <div class="stars-div">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>"These Cat Toys really ARE GREAT!"</p>
+                </div>
+                <div class="review-div">
+                    <div class="stars-div">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>                    
+                    </div>
+                    <p>"meow meow meow mewo meow meow meow mewo 
+                        meow meow meow mewo meow meow meow mewo meow 
+                        meow meow meow mewomeow meow meow mewo
+                        meow meow meow mewomeow meow mewo"</p>
+                </div>
+
+                <div class="review-div">
+                    <div class="stars-div">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>"Cicero are also reproduced in their 
+                        exact original form, accompanied by 
+                        English versions from the 1914 
+                        translation by H. Rackham!"</p>
+                </div>
+                <div class="review-div">
+                    <div class="stars-div">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i></i>
+                    </div>
+                    <p>"I can haz little best cat toy 
+                        as a treat uwu"</p>
+                </div>
+
+
         </div>
         <button class="arrowBtn"><i class="fa-solid fa-arrow-right"></i></button>
 
@@ -161,14 +359,17 @@
 
     <div id="Contact" class = "page">
         <img src="images/sidecat2.png" id = "sidecat2">
-            <form id="formDiv">
+            <form id="formDiv">                
                 <h3>Questions or concerns?</br> 
                     Feel free to get in touch!</h3>
+                <p class="small-txt">All fields are required</p>
 
                 <input id= "emailInput" type="email" placeholder="Email" required>
                 <input id= "subjectInput" type = "text" placeholder="Subject" required>
                 <textarea id= "messageInput" placeholder="Message" required></textarea>
                 <button id="formSubmitBtn">Submit</button>
+                <div id="alert-div"></div>
+
 
             </form>
     </div>
@@ -181,7 +382,7 @@
 
 
 
-        <script src = "./app.js" type="module"></script>
+        <script src = "./app.js"></script>
         <script src="https://kit.fontawesome.com/aea2a46acd.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -1,7 +1,4 @@
-import reviews from "./reviews.js"
-
 const modeBtn = document.getElementById("modeBtn")
-const navbar = document.getElementById("navbar")
 const homeLink = document.getElementById("homeLink")
 const productLink = document.getElementById("productLink")
 const aboutLink = document.getElementById("aboutLink")
@@ -9,12 +6,16 @@ const contactLink = document.getElementById("contactLink")
 const reviewLink = document.getElementById("reviewLink")
 const logoDiv = document.getElementById("logo-div")
 const arrowBtn = document.getElementsByClassName("arrowBtn")
-const reviewDiv = document.getElementById("reviewDiv")
 const formSubmitBtn = document.getElementById("formSubmitBtn")
 const formDiv = document.getElementById("formDiv")
 const emailInput = document.getElementById("emailInput")
 const subjectInput = document.getElementById("subjectInput")
 const messageInput = document.getElementById("messageInput")
+const alertDiv = document.getElementById("alert-div")
+const scroller = document.getElementById("scroller")
+const readMoreBtn = document.getElementById("read-more-btn")
+const readLessBtn = document.getElementById("read-less-btn")
+const readMorePara = document.getElementById("about-read-more-para")
 
 
 // DARK MODE
@@ -24,14 +25,10 @@ let darkMode = true
 function changeMode(){
         if (darkMode){            
             document.documentElement.setAttribute('data-theme', 'light');    
-            navbar.classList.add("navbar-light", "bg-light")
-            navbar.classList.remove("navbar-dark", "bg-dark")
             logoDiv.innerHTML = `<img id ="logo" src = "images/logo.png">`
             darkMode = false}
         else {
             document.documentElement.setAttribute('data-theme', 'dark')
-            navbar.classList.remove("navbar-light", "bg-light")
-            navbar.classList.add("navbar-dark", "bg-dark")
             logoDiv.innerHTML = `<img id ="logo" src = "images/darklogo.png">`
 
             darkMode = true
@@ -143,27 +140,42 @@ const contactObserver = new IntersectionObserver(function(entries) {
 contactObserver.observe(document.querySelector("#Contact"));
 
 
+
+// ABOUT 
+
+readMoreBtn.addEventListener("click", readMore)
+
+readLessBtn.addEventListener("click", readLess)
+
+
+function readMore(){
+    readMorePara.style.display = "inline";
+    readMoreBtn.style.display = "none"
+    readLessBtn.style.display = "inline"
+}
+
+function readLess(){
+    readMorePara.style.display = "none";
+    readMoreBtn.style.display = "inline"
+    readLessBtn.style.display = "none"
+}
+
+
 // REVIEWS
 
 arrowBtn[0].addEventListener("click", prevReview)
 arrowBtn[1].addEventListener("click", nextReview)
 
-let reviewNumber = 0
+let itemWidth = 311
 
 function prevReview(){
-    reviewNumber -=1
-    if(reviewNumber<0){
-        reviewNumber = reviews.length-1
-    }
-    reviewDiv.innerHTML = reviews[reviewNumber]
+    scroller.scrollBy({left: -itemWidth, top: 0, behavior: 'smooth'})
 }
 function nextReview(){
-    reviewNumber +=1
-    if(reviewNumber>=reviews.length){
-        reviewNumber = 0
-    }
-    reviewDiv.innerHTML = reviews[reviewNumber]
+    scroller.scrollBy({left: itemWidth, top: 0, behavior: 'smooth'})
+
 }
+
 
 
 // CONTACT FORM
@@ -173,11 +185,10 @@ document.addEventListener("keyup", checkInputs)
 formSubmitBtn.disabled = true
 
 function checkInputs (){
-
-    console.log(subjectInput.value.length)
+alertDiv.innerHTML = ""
 if (messageInput.value.length > 0 &&
-subjectInput.value.length > 0 &&
-emailInput.value.length > 0){
+    subjectInput.value.length > 0 &&
+    emailInput.value.length > 0){
     formSubmitBtn.disabled = false
 }
 else {formSubmitBtn.disabled = true}
@@ -189,14 +200,24 @@ formSubmitBtn.addEventListener("click", submitForm)
 function submitForm(e){
     e.preventDefault()
 
-    console.log("form sumbitted")
-    formSubmitBtn.innerText = "Thank you!"
-    setTimeout(()=>{
-        formSubmitBtn.innerText = "Submit"
-        formSubmitBtn.disabled = true}, 3000)
-    formDiv.reset()
+    if (emailInput.value.includes("@" && ".") && 
+        emailInput.value.length > 4 ){
+        // formSubmitBtn.innerText = "Thank you!"
+        // setTimeout(()=>{
+        //     formSubmitBtn.innerText = "Submit"
+        //     formSubmitBtn.disabled = true}, 3500)
+        formDiv.reset()
+        formSubmitBtn.disabled = true
+        const loginFormData = new FormData(formDiv)
+        console.log(loginFormData)
+        alertDiv.innerHTML = `Thank You!`
+
+    }
+    else {
+    alertDiv.innerHTML = `Email Invalid`
+    formSubmitBtn.disabled = true
+}
 
 
-    const loginFormData = new FormData(formDiv)
-    console.log(loginFormData)
+
 }
